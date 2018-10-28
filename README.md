@@ -17,12 +17,8 @@ Add this script
 
     (function close() {
         try {
-            var button = document.getElementById("confirm-button").children[0].children[0].children[0];
-            console.log(button);
-            button.click();
-        } catch (e) {
-        }
-        console.log("close");
+            document.getElementById("confirm-button").children[0].children[0].children[0].click();
+        } catch (e) {}
         setTimeout(close, 1000);
     })();
 
