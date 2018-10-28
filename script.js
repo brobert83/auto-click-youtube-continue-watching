@@ -4,12 +4,22 @@
 // @version      0.1
 // @description  try to take over the world!
 // @author       You
-// @match        https://www.youtube.com/watch?v=qWZL5RnfgtI
 // @grant        none
-// @include      https://www.youtube.com
+// @include      https://www.youtube.com/*
 // ==/UserScript==
 
-(function() {
+(function () {
     'use strict';
-    setTimeout(function(){document.getElementById("confirm-button").children[0].children[0].children[0].click()}, 1000);
+
+    (function close() {
+        try {
+            var button = document.getElementById("confirm-button").children[0].children[0].children[0];
+            console.log(button);
+            button.click();
+        } catch (e) {
+        }
+        console.log("close");
+        setTimeout(close, 1000);
+    })();
+
 })();
