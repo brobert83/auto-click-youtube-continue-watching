@@ -14,6 +14,7 @@
     (function close() {
         try {
             document.getElementById("confirm-button").children[0].children[0].children[0].click();
+            document.getElementsByClassName("style-scope ytd-popup-container")[0].removeChild(document.getElementById("toast"))
         } catch (e) {}
         setTimeout(close, 1000);
     })();
